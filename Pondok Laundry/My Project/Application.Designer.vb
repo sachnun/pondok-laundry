@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.Pondok_Laundry.SplashScreen
+            Me.MainForm = Global.Pondok_Laundry.Splash
         End Sub
     End Class
 End Namespace
