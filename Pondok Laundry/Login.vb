@@ -11,16 +11,16 @@ Public Class Login
     Private Sub btnLoginDatabase_Click(sender As System.Object, e As System.EventArgs) Handles btnLoginDatabase.Click
         Koneksi.Show()
     End Sub
-
-    Private Sub Login_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
-
-    End Sub
-
     Private Sub btnLogin_Click(sender As System.Object, e As System.EventArgs) Handles btnLogin.Click
-        vServer = "127.0.0.1"
-        vUser = "root"
-        vPass = ""
-        vDatabase = "pondok_laundry"
+        'vServer = "127.0.0.1"
+        'vUser = "root"
+        'vPass = ""
+        'vDatabase = "pondok_laundry"
+
+        vServer = Koneksi.txtKoneksiServer.Text
+        vUser = Koneksi.txtKoneksiUsername.Text
+        vPass = Koneksi.txtKoneksiPassword.Text
+        vDatabase = Koneksi.txtKoneksiDatabase.Text
 
         StrCN = "Database='" & vDatabase & "'; " & _
                 "Data Source='" & vServer & "'; " & _

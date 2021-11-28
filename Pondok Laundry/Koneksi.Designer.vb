@@ -145,6 +145,7 @@ Partial Class Koneksi
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(255, 287)
+        Me.ControlBox = False
         Me.Controls.Add(Me.checkKoneksiPassword)
         Me.Controls.Add(Me.btnKoneksiReset)
         Me.Controls.Add(Me.btnKoneksiOk)
