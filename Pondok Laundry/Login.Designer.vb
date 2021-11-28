@@ -31,6 +31,7 @@ Partial Class Login
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.btnLoginDatabase = New System.Windows.Forms.ToolStripButton()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.btnLogin = New System.Windows.Forms.Button()
         Me.ToolStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -52,6 +53,7 @@ Partial Class Login
         Me.txtLoginUsername.Name = "txtLoginUsername"
         Me.txtLoginUsername.Size = New System.Drawing.Size(226, 26)
         Me.txtLoginUsername.TabIndex = 3
+        Me.txtLoginUsername.Text = "admin"
         '
         'txtLoginPassword
         '
@@ -61,6 +63,7 @@ Partial Class Login
         Me.txtLoginPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtLoginPassword.Size = New System.Drawing.Size(205, 26)
         Me.txtLoginPassword.TabIndex = 5
+        Me.txtLoginPassword.Text = "admin"
         '
         'Label2
         '
@@ -102,19 +105,30 @@ Partial Class Login
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.Pondok_Laundry.My.Resources.Resources.logo_solid
-        Me.PictureBox1.Location = New System.Drawing.Point(33, 55)
+        Me.PictureBox1.Location = New System.Drawing.Point(34, 78)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(218, 107)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 2
         Me.PictureBox1.TabStop = False
         '
+        'btnLogin
+        '
+        Me.btnLogin.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLogin.Location = New System.Drawing.Point(295, 186)
+        Me.btnLogin.Name = "btnLogin"
+        Me.btnLogin.Size = New System.Drawing.Size(111, 28)
+        Me.btnLogin.TabIndex = 8
+        Me.btnLogin.Text = "Login"
+        Me.btnLogin.UseVisualStyleBackColor = True
+        '
         'Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(558, 197)
+        Me.ClientSize = New System.Drawing.Size(558, 237)
+        Me.Controls.Add(Me.btnLogin)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.checkLoginPassword)
         Me.Controls.Add(Me.txtLoginPassword)
@@ -143,4 +157,5 @@ Partial Class Login
     Friend WithEvents checkLoginPassword As System.Windows.Forms.CheckBox
     Friend WithEvents ToolStrip1 As System.Windows.Forms.ToolStrip
     Friend WithEvents btnLoginDatabase As System.Windows.Forms.ToolStripButton
+    Friend WithEvents btnLogin As System.Windows.Forms.Button
 End Class

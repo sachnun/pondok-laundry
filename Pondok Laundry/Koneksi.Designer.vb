@@ -23,27 +23,27 @@ Partial Class Koneksi
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Koneksi))
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtKoneksiServer = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtKoneksiUsername = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.txtKoneksiPassword = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.txtKoneksiDatabase = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.btnKoneksiOk = New System.Windows.Forms.Button()
+        Me.btnKoneksiReset = New System.Windows.Forms.Button()
+        Me.checkKoneksiPassword = New System.Windows.Forms.CheckBox()
         Me.SuspendLayout()
         '
-        'TextBox1
+        'txtKoneksiServer
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(15, 32)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(226, 25)
-        Me.TextBox1.TabIndex = 5
-        Me.TextBox1.Text = "localhost"
+        Me.txtKoneksiServer.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtKoneksiServer.Location = New System.Drawing.Point(15, 32)
+        Me.txtKoneksiServer.Name = "txtKoneksiServer"
+        Me.txtKoneksiServer.Size = New System.Drawing.Size(226, 25)
+        Me.txtKoneksiServer.TabIndex = 5
+        Me.txtKoneksiServer.Text = "localhost"
         '
         'Label1
         '
@@ -55,14 +55,14 @@ Partial Class Koneksi
         Me.Label1.TabIndex = 4
         Me.Label1.Text = "Server"
         '
-        'TextBox2
+        'txtKoneksiUsername
         '
-        Me.TextBox2.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(15, 89)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(226, 25)
-        Me.TextBox2.TabIndex = 7
-        Me.TextBox2.Text = "root"
+        Me.txtKoneksiUsername.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtKoneksiUsername.Location = New System.Drawing.Point(15, 89)
+        Me.txtKoneksiUsername.Name = "txtKoneksiUsername"
+        Me.txtKoneksiUsername.Size = New System.Drawing.Size(226, 25)
+        Me.txtKoneksiUsername.TabIndex = 7
+        Me.txtKoneksiUsername.Text = "root"
         '
         'Label2
         '
@@ -74,14 +74,14 @@ Partial Class Koneksi
         Me.Label2.TabIndex = 6
         Me.Label2.Text = "Username"
         '
-        'TextBox3
+        'txtKoneksiPassword
         '
-        Me.TextBox3.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(15, 146)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TextBox3.Size = New System.Drawing.Size(202, 25)
-        Me.TextBox3.TabIndex = 9
+        Me.txtKoneksiPassword.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtKoneksiPassword.Location = New System.Drawing.Point(15, 146)
+        Me.txtKoneksiPassword.Name = "txtKoneksiPassword"
+        Me.txtKoneksiPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.txtKoneksiPassword.Size = New System.Drawing.Size(202, 25)
+        Me.txtKoneksiPassword.TabIndex = 9
         '
         'Label3
         '
@@ -93,14 +93,14 @@ Partial Class Koneksi
         Me.Label3.TabIndex = 8
         Me.Label3.Text = "Password"
         '
-        'TextBox4
+        'txtKoneksiDatabase
         '
-        Me.TextBox4.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(16, 206)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(226, 25)
-        Me.TextBox4.TabIndex = 11
-        Me.TextBox4.Text = "pondok_laundry"
+        Me.txtKoneksiDatabase.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtKoneksiDatabase.Location = New System.Drawing.Point(16, 206)
+        Me.txtKoneksiDatabase.Name = "txtKoneksiDatabase"
+        Me.txtKoneksiDatabase.Size = New System.Drawing.Size(226, 25)
+        Me.txtKoneksiDatabase.TabIndex = 11
+        Me.txtKoneksiDatabase.Text = "pondok_laundry"
         '
         'Label4
         '
@@ -112,32 +112,32 @@ Partial Class Koneksi
         Me.Label4.TabIndex = 10
         Me.Label4.Text = "Database"
         '
-        'Button1
+        'btnKoneksiOk
         '
-        Me.Button1.Location = New System.Drawing.Point(177, 244)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(65, 23)
-        Me.Button1.TabIndex = 12
-        Me.Button1.Text = "OK"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnKoneksiOk.Location = New System.Drawing.Point(177, 244)
+        Me.btnKoneksiOk.Name = "btnKoneksiOk"
+        Me.btnKoneksiOk.Size = New System.Drawing.Size(65, 23)
+        Me.btnKoneksiOk.TabIndex = 12
+        Me.btnKoneksiOk.Text = "OK"
+        Me.btnKoneksiOk.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btnKoneksiReset
         '
-        Me.Button2.Location = New System.Drawing.Point(96, 244)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 13
-        Me.Button2.Text = "Batal"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnKoneksiReset.Location = New System.Drawing.Point(96, 244)
+        Me.btnKoneksiReset.Name = "btnKoneksiReset"
+        Me.btnKoneksiReset.Size = New System.Drawing.Size(75, 23)
+        Me.btnKoneksiReset.TabIndex = 13
+        Me.btnKoneksiReset.Text = "Reset"
+        Me.btnKoneksiReset.UseVisualStyleBackColor = True
         '
-        'CheckBox1
+        'checkKoneksiPassword
         '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(223, 152)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox1.TabIndex = 14
-        Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.checkKoneksiPassword.AutoSize = True
+        Me.checkKoneksiPassword.Location = New System.Drawing.Point(223, 152)
+        Me.checkKoneksiPassword.Name = "checkKoneksiPassword"
+        Me.checkKoneksiPassword.Size = New System.Drawing.Size(15, 14)
+        Me.checkKoneksiPassword.TabIndex = 14
+        Me.checkKoneksiPassword.UseVisualStyleBackColor = True
         '
         'Koneksi
         '
@@ -145,16 +145,16 @@ Partial Class Koneksi
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(255, 287)
-        Me.Controls.Add(Me.CheckBox1)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.TextBox4)
+        Me.Controls.Add(Me.checkKoneksiPassword)
+        Me.Controls.Add(Me.btnKoneksiReset)
+        Me.Controls.Add(Me.btnKoneksiOk)
+        Me.Controls.Add(Me.txtKoneksiDatabase)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.TextBox3)
+        Me.Controls.Add(Me.txtKoneksiPassword)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.txtKoneksiUsername)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtKoneksiServer)
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -167,15 +167,15 @@ Partial Class Koneksi
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents txtKoneksiServer As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
+    Friend WithEvents txtKoneksiUsername As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
+    Friend WithEvents txtKoneksiPassword As System.Windows.Forms.TextBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
+    Friend WithEvents txtKoneksiDatabase As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
+    Friend WithEvents btnKoneksiOk As System.Windows.Forms.Button
+    Friend WithEvents btnKoneksiReset As System.Windows.Forms.Button
+    Friend WithEvents checkKoneksiPassword As System.Windows.Forms.CheckBox
 End Class
