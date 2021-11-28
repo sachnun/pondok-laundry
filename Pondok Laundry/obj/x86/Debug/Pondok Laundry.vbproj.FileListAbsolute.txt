@@ -1,0 +1,10 @@
+C:\Users\DAKUNESU-PC\OneDrive\Unsera\Semester 5\Pemrograman Visual III\Laundry\Pondok Laundry\Pondok Laundry\Pondok Laundry\bin\Debug\Pondok Laundry.exe
+C:\Users\DAKUNESU-PC\OneDrive\Unsera\Semester 5\Pemrograman Visual III\Laundry\Pondok Laundry\Pondok Laundry\Pondok Laundry\bin\Debug\Pondok Laundry.pdb
+C:\Users\DAKUNESU-PC\OneDrive\Unsera\Semester 5\Pemrograman Visual III\Laundry\Pondok Laundry\Pondok Laundry\Pondok Laundry\bin\Debug\Pondok Laundry.xml
+C:\Users\DAKUNESU-PC\OneDrive\Unsera\Semester 5\Pemrograman Visual III\Laundry\Pondok Laundry\Pondok Laundry\Pondok Laundry\obj\x86\Debug\Pondok_Laundry.Resources.resources
+C:\Users\DAKUNESU-PC\OneDrive\Unsera\Semester 5\Pemrograman Visual III\Laundry\Pondok Laundry\Pondok Laundry\Pondok Laundry\obj\x86\Debug\Pondok Laundry.vbproj.GenerateResource.Cache
+C:\Users\DAKUNESU-PC\OneDrive\Unsera\Semester 5\Pemrograman Visual III\Laundry\Pondok Laundry\Pondok Laundry\Pondok Laundry\obj\x86\Debug\Pondok Laundry.exe
+C:\Users\DAKUNESU-PC\OneDrive\Unsera\Semester 5\Pemrograman Visual III\Laundry\Pondok Laundry\Pondok Laundry\Pondok Laundry\obj\x86\Debug\Pondok Laundry.xml
+C:\Users\DAKUNESU-PC\OneDrive\Unsera\Semester 5\Pemrograman Visual III\Laundry\Pondok Laundry\Pondok Laundry\Pondok Laundry\obj\x86\Debug\Pondok Laundry.pdb
+C:\Users\DAKUNESU-PC\OneDrive\Unsera\Semester 5\Pemrograman Visual III\Laundry\Pondok Laundry\Pondok Laundry\Pondok Laundry\obj\x86\Debug\Pondok_Laundry.SplashScreen.resources
+C:\Users\DAKUNESU-PC\OneDrive\Unsera\Semester 5\Pemrograman Visual III\Laundry\Pondok Laundry\Pondok Laundry\Pondok Laundry\obj\x86\Debug\Pondok_Laundry.Form2.resources
