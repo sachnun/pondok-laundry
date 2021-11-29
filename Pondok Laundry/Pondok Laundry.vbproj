@@ -76,7 +76,37 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Akun.Designer.vb">
+      <DependentUpon>Akun.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Akun.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AkunBaru.Designer.vb">
+      <DependentUpon>AkunBaru.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AkunBaru.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JenisBarang.Designer.vb">
+      <DependentUpon>JenisBarang.vb</DependentUpon>
+    </Compile>
+    <Compile Include="JenisBarang.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ModuleKoneksi.vb" />
+    <Compile Include="Pesanan.Designer.vb">
+      <DependentUpon>Pesanan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pesanan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PesananBaru.Designer.vb">
+      <DependentUpon>PesananBaru.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PesananBaru.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Utama.Designer.vb">
       <DependentUpon>Utama.vb</DependentUpon>
     </Compile>
@@ -119,8 +149,23 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Akun.resx">
+      <DependentUpon>Akun.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AkunBaru.resx">
+      <DependentUpon>AkunBaru.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JenisBarang.resx">
+      <DependentUpon>JenisBarang.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Koneksi.resx">
       <DependentUpon>Koneksi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pesanan.resx">
+      <DependentUpon>Pesanan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PesananBaru.resx">
+      <DependentUpon>PesananBaru.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Splash.resx">
       <DependentUpon>Splash.vb</DependentUpon>
@@ -163,6 +208,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
+    <None Include="Resources\icon_chart.png" />
+    <None Include="Resources\icon_user.png" />
+    <None Include="Resources\icon_obeng.png" />
+    <None Include="Resources\close.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

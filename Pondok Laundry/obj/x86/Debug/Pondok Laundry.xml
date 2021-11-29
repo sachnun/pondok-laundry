@@ -15,7 +15,23 @@ PondokLaundry
   Overrides the current thread's CurrentUICulture property for all
   resource lookups using this strongly typed resource class.
 </summary>
+</member><member name="P:Pondok_Laundry.My.Resources.Resources.icon_chart">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Pondok_Laundry.My.Resources.Resources.icon_close">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:Pondok_Laundry.My.Resources.Resources.icon_database">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Pondok_Laundry.My.Resources.Resources.icon_obeng">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Pondok_Laundry.My.Resources.Resources.icon_user">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

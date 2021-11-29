@@ -29,9 +29,9 @@ Partial Class Login
         Me.Label2 = New System.Windows.Forms.Label()
         Me.checkLoginPassword = New System.Windows.Forms.CheckBox()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.btnLogin = New System.Windows.Forms.Button()
         Me.btnLoginDatabase = New System.Windows.Forms.ToolStripButton()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.btnLogin = New System.Windows.Forms.Button()
         Me.ToolStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -93,14 +93,23 @@ Partial Class Login
         Me.ToolStrip1.TabIndex = 7
         Me.ToolStrip1.Text = "ToolStrip1"
         '
+        'btnLogin
+        '
+        Me.btnLogin.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLogin.Location = New System.Drawing.Point(295, 186)
+        Me.btnLogin.Name = "btnLogin"
+        Me.btnLogin.Size = New System.Drawing.Size(111, 28)
+        Me.btnLogin.TabIndex = 8
+        Me.btnLogin.Text = "Login"
+        Me.btnLogin.UseVisualStyleBackColor = True
+        '
         'btnLoginDatabase
         '
-        Me.btnLoginDatabase.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.btnLoginDatabase.Image = CType(resources.GetObject("btnLoginDatabase.Image"), System.Drawing.Image)
+        Me.btnLoginDatabase.Image = Global.Pondok_Laundry.My.Resources.Resources.icon_obeng
         Me.btnLoginDatabase.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnLoginDatabase.Name = "btnLoginDatabase"
-        Me.btnLoginDatabase.Size = New System.Drawing.Size(59, 22)
-        Me.btnLoginDatabase.Text = "Database"
+        Me.btnLoginDatabase.Size = New System.Drawing.Size(68, 22)
+        Me.btnLoginDatabase.Text = "Koneksi"
         '
         'PictureBox1
         '
@@ -111,16 +120,6 @@ Partial Class Login
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 2
         Me.PictureBox1.TabStop = False
-        '
-        'btnLogin
-        '
-        Me.btnLogin.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLogin.Location = New System.Drawing.Point(295, 186)
-        Me.btnLogin.Name = "btnLogin"
-        Me.btnLogin.Size = New System.Drawing.Size(111, 28)
-        Me.btnLogin.TabIndex = 8
-        Me.btnLogin.Text = "Login"
-        Me.btnLogin.UseVisualStyleBackColor = True
         '
         'Login
         '

@@ -20,3 +20,8 @@ D:\Coding\Desktop\Pondok Laundry\Pondok Laundry\bin\Debug\Pondok Laundry.pdb
 D:\Coding\Desktop\Pondok Laundry\Pondok Laundry\bin\Debug\Pondok Laundry.xml
 D:\Coding\Desktop\Pondok Laundry\Pondok Laundry\obj\x86\Debug\Pondok_Laundry.Koneksi.resources
 D:\Coding\Desktop\Pondok Laundry\Pondok Laundry\obj\x86\Debug\Pondok_Laundry.Utama.resources
+D:\Coding\Desktop\Pondok Laundry\Pondok Laundry\obj\x86\Debug\Pondok_Laundry.PesananBaru.resources
+D:\Coding\Desktop\Pondok Laundry\Pondok Laundry\obj\x86\Debug\Pondok_Laundry.JenisBarang.resources
+D:\Coding\Desktop\Pondok Laundry\Pondok Laundry\obj\x86\Debug\Pondok_Laundry.Pesanan.resources
+D:\Coding\Desktop\Pondok Laundry\Pondok Laundry\obj\x86\Debug\Pondok_Laundry.Akun.resources
+D:\Coding\Desktop\Pondok Laundry\Pondok Laundry\obj\x86\Debug\Pondok_Laundry.AkunBaru.resources

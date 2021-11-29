@@ -9,42 +9,50 @@ Public Class Login
     End Sub
 
     Private Sub btnLoginDatabase_Click(sender As System.Object, e As System.EventArgs) Handles btnLoginDatabase.Click
-        Koneksi.Show()
+        Koneksi.ShowDialog()
     End Sub
     Private Sub btnLogin_Click(sender As System.Object, e As System.EventArgs) Handles btnLogin.Click
-        'vServer = "127.0.0.1"
-        'vUser = "root"
-        'vPass = ""
-        'vDatabase = "pondok_laundry"
+        Try
+            'vServer = "127.0.0.1"
+            'vUser = "root"
+            'vPass = ""
+            'vDatabase = "pondok_laundry"
 
-        vServer = Koneksi.txtKoneksiServer.Text
-        vUser = Koneksi.txtKoneksiUsername.Text
-        vPass = Koneksi.txtKoneksiPassword.Text
-        vDatabase = Koneksi.txtKoneksiDatabase.Text
+            vServer = Koneksi.txtKoneksiServer.Text
+            vUser = Koneksi.txtKoneksiUsername.Text
+            vPass = Koneksi.txtKoneksiPassword.Text
+            vDatabase = Koneksi.txtKoneksiDatabase.Text
 
-        StrCN = "Database='" & vDatabase & "'; " & _
-                "Data Source='" & vServer & "'; " & _
-                "User id='" & vUser & "'; " & _
-                "Password='" & vPass & "'"
+            StrCN = "Database='" & vDatabase & "'; " & _
+                    "Data Source='" & vServer & "'; " & _
+                    "User id='" & vUser & "'; " & _
+                    "Password='" & vPass & "'"
 
-        CN = New MySqlConnection(StrCN)
-        CN.Open()
+            CN = New MySqlConnection(StrCN)
+            CN.Open()
 
-        Dim username = txtLoginUsername.Text
-        Dim password = txtLoginPassword.Text
+            Dim username = txtLoginUsername.Text
+            Dim password = txtLoginPassword.Text
 
-        StrSQL = "SELECT * FROM user WHERE username = '" & username & "' AND password = '" & password & "'"
-        Dim MyCommand As New MySqlCommand(StrSQL, CN)
-        RdData = MyCommand.ExecuteReader
+            StrSQL = "SELECT * FROM user WHERE username = '" & username & "' AND password = '" & password & "'"
+            Dim MyCommand As New MySqlCommand(StrSQL, CN)
+            RdData = MyCommand.ExecuteReader
 
-        If RdData.Read = False Then
-            MsgBox("Maaf, username atau password salah!", vbOKOnly, "Login")
-            txtLoginPassword.Text = ""
-            txtLoginPassword.Focus()
-        Else
-            'MsgBox("Login berhasil!", vbOKOnly, "Login")
-            Utama.Show()
-            Me.Close()
-        End If
+            If RdData.Read = False Then
+                MsgBox("Maaf, username atau password salah!", vbOKOnly, "Login")
+                txtLoginPassword.Text = ""
+                txtLoginPassword.Focus()
+            Else
+                'MsgBox("Login berhasil!", vbOKOnly, "Login")
+                vPetugas = txtLoginUsername.Text
+
+                Utama.lbUtamaWelcome.Text = "Hi, " & vPetugas & "."
+                Utama.Show()
+                Me.Hide()
+            End If
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Kesalahan", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
     End Sub
 End Class
