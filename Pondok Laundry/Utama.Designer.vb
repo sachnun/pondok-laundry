@@ -27,16 +27,6 @@ Partial Class Utama
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.btnUtamaPesananBaru = New System.Windows.Forms.Button()
-        Me.btnUtamaJenisBarang = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.lbUtamaWelcome = New System.Windows.Forms.Label()
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.toolstripBtnAkun = New System.Windows.Forms.ToolStripDropDownButton()
         Me.ProfileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DaftarBaruToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -46,7 +36,17 @@ Partial Class Utama
         Me.BulananToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MingguanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HarianToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.toolstripBtnExit = New System.Windows.Forms.ToolStripButton()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.btnUtamaPesananBaru = New System.Windows.Forms.Button()
+        Me.btnUtamaJenisBarang = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.lbUtamaWelcome = New System.Windows.Forms.Label()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.StatusStrip1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -80,10 +80,77 @@ Partial Class Utama
         Me.ToolStrip1.TabIndex = 2
         Me.ToolStrip1.Text = "ToolStrip1"
         '
+        'toolstripBtnAkun
+        '
+        Me.toolstripBtnAkun.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ProfileToolStripMenuItem, Me.DaftarBaruToolStripMenuItem, Me.ToolStripSeparator2, Me.LogoutToolStripMenuItem})
+        Me.toolstripBtnAkun.Image = Global.Pondok_Laundry.My.Resources.Resources.icon_user
+        Me.toolstripBtnAkun.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.toolstripBtnAkun.Name = "toolstripBtnAkun"
+        Me.toolstripBtnAkun.Size = New System.Drawing.Size(64, 22)
+        Me.toolstripBtnAkun.Text = "Akun"
+        '
+        'ProfileToolStripMenuItem
+        '
+        Me.ProfileToolStripMenuItem.Name = "ProfileToolStripMenuItem"
+        Me.ProfileToolStripMenuItem.Size = New System.Drawing.Size(133, 22)
+        Me.ProfileToolStripMenuItem.Text = "Profile"
+        '
+        'DaftarBaruToolStripMenuItem
+        '
+        Me.DaftarBaruToolStripMenuItem.Name = "DaftarBaruToolStripMenuItem"
+        Me.DaftarBaruToolStripMenuItem.Size = New System.Drawing.Size(133, 22)
+        Me.DaftarBaruToolStripMenuItem.Text = "Daftar Baru"
+        '
+        'ToolStripSeparator2
+        '
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(130, 6)
+        '
+        'LogoutToolStripMenuItem
+        '
+        Me.LogoutToolStripMenuItem.Name = "LogoutToolStripMenuItem"
+        Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(133, 22)
+        Me.LogoutToolStripMenuItem.Text = "Logout"
+        '
+        'toolstripBtnLaporan
+        '
+        Me.toolstripBtnLaporan.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BulananToolStripMenuItem, Me.MingguanToolStripMenuItem, Me.HarianToolStripMenuItem})
+        Me.toolstripBtnLaporan.Image = Global.Pondok_Laundry.My.Resources.Resources.icon_chart
+        Me.toolstripBtnLaporan.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.toolstripBtnLaporan.Name = "toolstripBtnLaporan"
+        Me.toolstripBtnLaporan.Size = New System.Drawing.Size(79, 22)
+        Me.toolstripBtnLaporan.Text = "Laporan"
+        '
+        'BulananToolStripMenuItem
+        '
+        Me.BulananToolStripMenuItem.Name = "BulananToolStripMenuItem"
+        Me.BulananToolStripMenuItem.Size = New System.Drawing.Size(129, 22)
+        Me.BulananToolStripMenuItem.Text = "Bulanan"
+        '
+        'MingguanToolStripMenuItem
+        '
+        Me.MingguanToolStripMenuItem.Name = "MingguanToolStripMenuItem"
+        Me.MingguanToolStripMenuItem.Size = New System.Drawing.Size(129, 22)
+        Me.MingguanToolStripMenuItem.Text = "Mingguan"
+        '
+        'HarianToolStripMenuItem
+        '
+        Me.HarianToolStripMenuItem.Name = "HarianToolStripMenuItem"
+        Me.HarianToolStripMenuItem.Size = New System.Drawing.Size(129, 22)
+        Me.HarianToolStripMenuItem.Text = "Harian"
+        '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
         Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 25)
+        '
+        'toolstripBtnExit
+        '
+        Me.toolstripBtnExit.Image = Global.Pondok_Laundry.My.Resources.Resources.icon_close
+        Me.toolstripBtnExit.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.toolstripBtnExit.Name = "toolstripBtnExit"
+        Me.toolstripBtnExit.Size = New System.Drawing.Size(60, 22)
+        Me.toolstripBtnExit.Text = "Keluar"
         '
         'GroupBox1
         '
@@ -92,7 +159,7 @@ Partial Class Utama
         Me.GroupBox1.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(253, 48)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(480, 301)
+        Me.GroupBox1.Size = New System.Drawing.Size(485, 301)
         Me.GroupBox1.TabIndex = 7
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Pesanan Saat Ini"
@@ -140,7 +207,7 @@ Partial Class Utama
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(193, 39)
         Me.Button3.TabIndex = 6
-        Me.Button3.Text = "Button3"
+        Me.Button3.Text = "-"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'lbUtamaWelcome
@@ -161,79 +228,12 @@ Partial Class Utama
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.Pondok_Laundry.My.Resources.Resources.logo_solid
-        Me.PictureBox1.Location = New System.Drawing.Point(29, 48)
+        Me.PictureBox1.Location = New System.Drawing.Point(29, 54)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(193, 107)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 3
         Me.PictureBox1.TabStop = False
-        '
-        'toolstripBtnAkun
-        '
-        Me.toolstripBtnAkun.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ProfileToolStripMenuItem, Me.DaftarBaruToolStripMenuItem, Me.ToolStripSeparator2, Me.LogoutToolStripMenuItem})
-        Me.toolstripBtnAkun.Image = Global.Pondok_Laundry.My.Resources.Resources.icon_user
-        Me.toolstripBtnAkun.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.toolstripBtnAkun.Name = "toolstripBtnAkun"
-        Me.toolstripBtnAkun.Size = New System.Drawing.Size(64, 22)
-        Me.toolstripBtnAkun.Text = "Akun"
-        '
-        'ProfileToolStripMenuItem
-        '
-        Me.ProfileToolStripMenuItem.Name = "ProfileToolStripMenuItem"
-        Me.ProfileToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.ProfileToolStripMenuItem.Text = "Profile"
-        '
-        'DaftarBaruToolStripMenuItem
-        '
-        Me.DaftarBaruToolStripMenuItem.Name = "DaftarBaruToolStripMenuItem"
-        Me.DaftarBaruToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.DaftarBaruToolStripMenuItem.Text = "Daftar Baru"
-        '
-        'ToolStripSeparator2
-        '
-        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(149, 6)
-        '
-        'LogoutToolStripMenuItem
-        '
-        Me.LogoutToolStripMenuItem.Name = "LogoutToolStripMenuItem"
-        Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.LogoutToolStripMenuItem.Text = "Logout"
-        '
-        'toolstripBtnLaporan
-        '
-        Me.toolstripBtnLaporan.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BulananToolStripMenuItem, Me.MingguanToolStripMenuItem, Me.HarianToolStripMenuItem})
-        Me.toolstripBtnLaporan.Image = Global.Pondok_Laundry.My.Resources.Resources.icon_chart
-        Me.toolstripBtnLaporan.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.toolstripBtnLaporan.Name = "toolstripBtnLaporan"
-        Me.toolstripBtnLaporan.Size = New System.Drawing.Size(79, 22)
-        Me.toolstripBtnLaporan.Text = "Laporan"
-        '
-        'BulananToolStripMenuItem
-        '
-        Me.BulananToolStripMenuItem.Name = "BulananToolStripMenuItem"
-        Me.BulananToolStripMenuItem.Size = New System.Drawing.Size(129, 22)
-        Me.BulananToolStripMenuItem.Text = "Bulanan"
-        '
-        'MingguanToolStripMenuItem
-        '
-        Me.MingguanToolStripMenuItem.Name = "MingguanToolStripMenuItem"
-        Me.MingguanToolStripMenuItem.Size = New System.Drawing.Size(129, 22)
-        Me.MingguanToolStripMenuItem.Text = "Mingguan"
-        '
-        'HarianToolStripMenuItem
-        '
-        Me.HarianToolStripMenuItem.Name = "HarianToolStripMenuItem"
-        Me.HarianToolStripMenuItem.Size = New System.Drawing.Size(129, 22)
-        Me.HarianToolStripMenuItem.Text = "Harian"
-        '
-        'toolstripBtnExit
-        '
-        Me.toolstripBtnExit.Image = Global.Pondok_Laundry.My.Resources.Resources.icon_close
-        Me.toolstripBtnExit.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.toolstripBtnExit.Name = "toolstripBtnExit"
-        Me.toolstripBtnExit.Size = New System.Drawing.Size(60, 22)
-        Me.toolstripBtnExit.Text = "Keluar"
         '
         'Utama
         '
