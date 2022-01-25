@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Waktu pembuatan: 24 Jan 2022 pada 16.29
+-- Waktu pembuatan: 25 Jan 2022 pada 06.55
 -- Versi server: 5.7.33
 -- Versi PHP: 8.0.9
 
@@ -44,10 +44,11 @@ CREATE TABLE `pemesanan` (
   `nama_pemesan` varchar(225) DEFAULT NULL,
   `telepon` varchar(225) DEFAULT NULL,
   `alamat` text,
-  `tanggal_masuk` datetime DEFAULT NULL,
-  `tanggal_selesai` datetime DEFAULT NULL,
+  `tanggal_masuk` date DEFAULT NULL,
+  `tanggal_selesai` date DEFAULT NULL,
   `total_harga` int(100) DEFAULT NULL,
-  `id_user` int(11) NOT NULL
+  `id_user` int(11) NOT NULL,
+  `status` set('proses','selesai') DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -124,7 +125,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT untuk tabel `barang`
 --
 ALTER TABLE `barang`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT untuk tabel `pemesanan`
@@ -143,6 +144,17 @@ ALTER TABLE `pemesanan_barang`
 --
 ALTER TABLE `user`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
+--
+
+--
+-- Ketidakleluasaan untuk tabel `pemesanan_barang`
+--
+ALTER TABLE `pemesanan_barang`
+  ADD CONSTRAINT `pemesanan_barang_ibfk_1` FOREIGN KEY (`id_barang`) REFERENCES `barang` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `pemesanan_barang_ibfk_2` FOREIGN KEY (`nota_pemesanan`) REFERENCES `pemesanan` (`nota`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
