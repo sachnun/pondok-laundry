@@ -8,6 +8,7 @@ Public Class PesananBaruBarang
 
     Private Sub PesananBaruBarang_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         nota = PesananBaru.lbNota.Text
+        clearInput()
         loadBarang()
     End Sub
 
@@ -96,5 +97,11 @@ Public Class PesananBaruBarang
         Dim cmd As MySqlCommand = New MySqlCommand(StrSQL, CN)
         cmd.ExecuteNonQuery()
         MessageBox.Show("Pemesanan Barang berhasil ditambahkan", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information)
+    End Sub
+
+    ' clear all input
+    Private Sub clearInput()
+        txtJumlah.Text = "1"
+        txtKeterangan.Text = ""
     End Sub
 End Class

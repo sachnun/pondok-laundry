@@ -26,6 +26,7 @@ Partial Class JenisBarang
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.txtHargaSatuan = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -33,7 +34,6 @@ Partial Class JenisBarang
         Me.txtNamaBarang = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnSimpanBarang = New System.Windows.Forms.Button()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -84,6 +84,15 @@ Partial Class JenisBarang
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Form Barang"
         '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(123, 119)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(27, 13)
+        Me.Label4.TabIndex = 7
+        Me.Label4.Text = "Rp. "
+        '
         'ComboBox1
         '
         Me.ComboBox1.Enabled = False
@@ -103,11 +112,11 @@ Partial Class JenisBarang
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(30, 119)
+        Me.Label3.Location = New System.Drawing.Point(33, 119)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(73, 13)
+        Me.Label3.Size = New System.Drawing.Size(70, 13)
         Me.Label3.TabIndex = 4
-        Me.Label3.Text = "Harga Satuan"
+        Me.Label3.Text = "Biaya Satuan"
         '
         'Label2
         '
@@ -143,15 +152,6 @@ Partial Class JenisBarang
         Me.btnSimpanBarang.TabIndex = 4
         Me.btnSimpanBarang.Text = "Simpan"
         Me.btnSimpanBarang.UseVisualStyleBackColor = True
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(123, 119)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(27, 13)
-        Me.Label4.TabIndex = 7
-        Me.Label4.Text = "Rp. "
         '
         'JenisBarang
         '

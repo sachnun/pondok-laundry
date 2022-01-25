@@ -28,7 +28,7 @@ Public Class JenisBarang
             .Columns(0).Visible = False
             .Columns(1).HeaderText = "Nama Barang"
             .Columns(1).Width = 150
-            .Columns(2).HeaderText = "Harga Satuan"
+            .Columns(2).HeaderText = "Biaya Satuan"
         End With
 
     End Sub
@@ -64,7 +64,7 @@ Public Class JenisBarang
         Else
             ' check txtHargaSatuan is number
             If IsNumeric(txtHargaSatuan.Text) = False Then
-                MsgBox("Harga harus berupa angka", MsgBoxStyle.Exclamation, "Peringatan")
+                MsgBox("Biaya harus berupa angka", MsgBoxStyle.Exclamation, "Peringatan")
             Else
                 simpanBarang()
                 loadBarang()

@@ -66,9 +66,9 @@ Partial Class PesananBaruBarang
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(44, 148)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(36, 13)
+        Me.Label3.Size = New System.Drawing.Size(33, 13)
         Me.Label3.TabIndex = 4
-        Me.Label3.Text = "Harga"
+        Me.Label3.Text = "Biaya"
         '
         'Label2
         '
@@ -128,6 +128,7 @@ Partial Class PesananBaruBarang
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
+        Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGridView1.GridColor = System.Drawing.Color.White

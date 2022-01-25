@@ -40,16 +40,14 @@ Partial Class Utama
         Me.toolstripBtnExit = New System.Windows.Forms.ToolStripButton()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.nota = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.status = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.nama_pemesan = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.total_harga = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.btnUtamaPesananBaru = New System.Windows.Forms.Button()
         Me.btnUtamaJenisBarang = New System.Windows.Forms.Button()
         Me.lbUtamaWelcome = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lbProsesCount = New System.Windows.Forms.Label()
         Me.StatusStrip1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -157,6 +155,8 @@ Partial Class Utama
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.lbProsesCount)
+        Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.DataGridView1)
         Me.GroupBox1.Controls.Add(Me.DateTimePicker1)
         Me.GroupBox1.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -172,39 +172,16 @@ Partial Class Utama
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
+        Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.nota, Me.status, Me.nama_pemesan, Me.total_harga})
         Me.DataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.DataGridView1.Location = New System.Drawing.Point(21, 58)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowHeadersVisible = False
+        Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView1.Size = New System.Drawing.Size(443, 222)
         Me.DataGridView1.TabIndex = 1
-        '
-        'nota
-        '
-        Me.nota.HeaderText = "Nota"
-        Me.nota.Name = "nota"
-        Me.nota.ReadOnly = True
-        '
-        'status
-        '
-        Me.status.HeaderText = "Status"
-        Me.status.Name = "status"
-        Me.status.ReadOnly = True
-        '
-        'nama_pemesan
-        '
-        Me.nama_pemesan.HeaderText = "Pemesan"
-        Me.nama_pemesan.Name = "nama_pemesan"
-        Me.nama_pemesan.ReadOnly = True
-        '
-        'total_harga
-        '
-        Me.total_harga.HeaderText = "Harga"
-        Me.total_harga.Name = "total_harga"
-        Me.total_harga.ReadOnly = True
         '
         'DateTimePicker1
         '
@@ -215,18 +192,18 @@ Partial Class Utama
         '
         'btnUtamaPesananBaru
         '
-        Me.btnUtamaPesananBaru.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnUtamaPesananBaru.Location = New System.Drawing.Point(29, 216)
+        Me.btnUtamaPesananBaru.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnUtamaPesananBaru.Location = New System.Drawing.Point(29, 220)
         Me.btnUtamaPesananBaru.Name = "btnUtamaPesananBaru"
-        Me.btnUtamaPesananBaru.Size = New System.Drawing.Size(193, 40)
+        Me.btnUtamaPesananBaru.Size = New System.Drawing.Size(193, 52)
         Me.btnUtamaPesananBaru.TabIndex = 4
         Me.btnUtamaPesananBaru.Text = "Pesanan Baru"
         Me.btnUtamaPesananBaru.UseVisualStyleBackColor = True
         '
         'btnUtamaJenisBarang
         '
-        Me.btnUtamaJenisBarang.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnUtamaJenisBarang.Location = New System.Drawing.Point(29, 262)
+        Me.btnUtamaJenisBarang.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnUtamaJenisBarang.Location = New System.Drawing.Point(29, 284)
         Me.btnUtamaJenisBarang.Name = "btnUtamaJenisBarang"
         Me.btnUtamaJenisBarang.Size = New System.Drawing.Size(193, 42)
         Me.btnUtamaJenisBarang.TabIndex = 5
@@ -258,6 +235,23 @@ Partial Class Utama
         Me.PictureBox1.TabIndex = 3
         Me.PictureBox1.TabStop = False
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(318, 33)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(98, 16)
+        Me.Label1.TabIndex = 2
+        Me.Label1.Text = "Dalam Proses :"
+        '
+        'lbProsesCount
+        '
+        Me.lbProsesCount.Location = New System.Drawing.Point(420, 33)
+        Me.lbProsesCount.Name = "lbProsesCount"
+        Me.lbProsesCount.Size = New System.Drawing.Size(44, 16)
+        Me.lbProsesCount.TabIndex = 3
+        Me.lbProsesCount.Text = "999"
+        '
         'Utama
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -282,6 +276,7 @@ Partial Class Utama
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -310,8 +305,6 @@ Partial Class Utama
     Friend WithEvents MingguanToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents HarianToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ProfileToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents nota As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents status As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents nama_pemesan As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents total_harga As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents lbProsesCount As System.Windows.Forms.Label
+    Friend WithEvents Label1 As System.Windows.Forms.Label
 End Class

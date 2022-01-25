@@ -191,7 +191,7 @@ Partial Class PesananBaru
         Me.GroupBox3.Size = New System.Drawing.Size(277, 70)
         Me.GroupBox3.TabIndex = 5
         Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "Total Harga"
+        Me.GroupBox3.Text = "Total Biaya"
         '
         'lbTotalHarga
         '

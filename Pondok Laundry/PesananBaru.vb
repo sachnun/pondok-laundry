@@ -1,11 +1,13 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class PesananBaru
     Dim nota As String
+    Dim total_harga As Integer
     Private Sub btnTambahBarangPesanan_Click(sender As System.Object, e As System.EventArgs) Handles btnTambahBarangPesanan.Click
         PesananBaruBarang.ShowDialog()
     End Sub
 
     Private Sub PesananBaru_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+        clearInput()
         createPesanan()
     End Sub
 
@@ -48,12 +50,8 @@ Public Class PesananBaru
     End Sub
 
     Private Sub btnBatalPesanan_Click(sender As System.Object, e As System.EventArgs) Handles btnBatalPesanan.Click
-        Me.Close()
-    End Sub
-
-    ' on close delete pesanan
-    Private Sub PesananBaru_FormClosing(sender As System.Object, e As System.Windows.Forms.FormClosingEventArgs) Handles MyBase.FormClosing
         deletePesanan()
+        Me.close()
     End Sub
 
     ' load pemesanan barang
@@ -68,13 +66,71 @@ Public Class PesananBaru
 
         ' load data to DataGridView
         Dim dt As New DataTable
-        Dim da As New MySqlDataAdapter("SELECT * FROM pemesanan_barang WHERE nota_pemesanan = '" & nota & "'", CN)
+        ' select barang.nama_barang, pemesanan_barang.jumlah, pemesanan_barang.keterangan
+        StrSQL = "SELECT barang.nama_barang,  barang.harga_satuan, pemesanan_barang.jumlah, pemesanan_barang.keterangan FROM pemesanan_barang, barang WHERE pemesanan_barang.id_barang = barang.id AND pemesanan_barang.nota_pemesanan = '" & nota & "'"
+        Dim da As New MySqlDataAdapter(StrSQL, CN)
         da.Fill(dt)
         DataGridView1.DataSource = dt
+
+        With DataGridView1
+            .Columns(0).HeaderText = "Nama Barang"
+            .Columns(1).HeaderText = "Harga Satuan"
+            .Columns(2).HeaderText = "Jumlah"
+            .Columns(3).HeaderText = "Keterangan"
+        End With
+
+        hitungTotalHarga()
     End Sub
 
     ' form on focus
     Private Sub PesananBaru_Activated(sender As System.Object, e As System.EventArgs) Handles MyBase.Activated
         loadPemesananBarang()
+    End Sub
+
+    ' hitung total harga satuan * jumlah dari DataGridView
+    Private Sub hitungTotalHarga()
+        Dim total As Integer = 0
+        For i As Integer = 0 To DataGridView1.Rows.Count - 1
+            total += DataGridView1.Rows(i).Cells(1).Value * DataGridView1.Rows(i).Cells(2).Value
+        Next
+        total_harga = total
+        lbTotalHarga.Text = "Rp. " + CStr(total_harga)
+    End Sub
+
+    Private Sub btnOrderPesanan_Click(sender As System.Object, e As System.EventArgs) Handles btnOrderPesanan.Click
+        ' check input not empty
+        If txtNama.Text = "" Or txtTelepon.Text = "" Or txtAlamat.Text = "" Or total_harga = 0 Then
+            MsgBox("Data tidak boleh kosong", MsgBoxStyle.Exclamation, "Pesan")
+        Else
+            simpanPesanan()
+        End If
+    End Sub
+
+    ' simpan pesanan
+    Private Sub simpanPesanan()
+        StrCN = "Database='" & vDatabase & "'; " & _
+            "Data Source='" & vServer & "'; " & _
+            "User id='" & vUser & "'; " & _
+            "Password='" & vPass & "'"
+
+        CN = New MySqlConnection(StrCN)
+        CN.Open()
+
+        ' update data nama_pemesan, telepon, alamat, total_harga, status
+        StrSQL = "UPDATE pemesanan SET nama_pemesan = '" & txtNama.Text & "', telepon = '" & txtTelepon.Text & "', alamat = '" & txtAlamat.Text & "', total_harga = '" & total_harga & "', status = 'proses', tanggal_masuk = now() WHERE nota = '" & nota & "'"
+        Dim cmd As MySqlCommand = New MySqlCommand(StrSQL, CN)
+        cmd.ExecuteNonQuery()
+        ' show message
+        MsgBox("Pemesanan berhasil ditambahkan", MsgBoxStyle.Information, "Pemesanan")
+        Me.Close()
+    End Sub
+
+    ' clear all input
+    Private Sub clearInput()
+        txtNama.Text = ""
+        txtTelepon.Text = ""
+        txtAlamat.Text = ""
+        total_harga = 0
+        lbTotalHarga.Text = "Rp. " + CStr(total_harga)
     End Sub
 End Class
