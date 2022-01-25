@@ -107,6 +107,12 @@
     <Compile Include="PesananBaru.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="PesananBaruBarang.Designer.vb">
+      <DependentUpon>PesananBaruBarang.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PesananBaruBarang.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Utama.Designer.vb">
       <DependentUpon>Utama.vb</DependentUpon>
     </Compile>
@@ -166,6 +172,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PesananBaru.resx">
       <DependentUpon>PesananBaru.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PesananBaruBarang.resx">
+      <DependentUpon>PesananBaruBarang.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Splash.resx">
       <DependentUpon>Splash.vb</DependentUpon>

@@ -25,3 +25,21 @@ D:\Coding\Desktop\Pondok Laundry\Pondok Laundry\obj\x86\Debug\Pondok_Laundry.Jen
 D:\Coding\Desktop\Pondok Laundry\Pondok Laundry\obj\x86\Debug\Pondok_Laundry.Pesanan.resources
 D:\Coding\Desktop\Pondok Laundry\Pondok Laundry\obj\x86\Debug\Pondok_Laundry.Akun.resources
 D:\Coding\Desktop\Pondok Laundry\Pondok Laundry\obj\x86\Debug\Pondok_Laundry.AkunBaru.resources
+D:\Coding\Desktop\pondok-laundry-main\Pondok Laundry\obj\x86\Debug\Pondok Laundry.exe
+D:\Coding\Desktop\pondok-laundry-main\Pondok Laundry\obj\x86\Debug\Pondok Laundry.xml
+D:\Coding\Desktop\pondok-laundry-main\Pondok Laundry\obj\x86\Debug\Pondok Laundry.pdb
+D:\Coding\Desktop\pondok-laundry-main\Pondok Laundry\bin\Debug\Pondok Laundry.exe
+D:\Coding\Desktop\pondok-laundry-main\Pondok Laundry\bin\Debug\Pondok Laundry.pdb
+D:\Coding\Desktop\pondok-laundry-main\Pondok Laundry\bin\Debug\Pondok Laundry.xml
+D:\Coding\Desktop\pondok-laundry-main\Pondok Laundry\obj\x86\Debug\Pondok_Laundry.Akun.resources
+D:\Coding\Desktop\pondok-laundry-main\Pondok Laundry\obj\x86\Debug\Pondok_Laundry.AkunBaru.resources
+D:\Coding\Desktop\pondok-laundry-main\Pondok Laundry\obj\x86\Debug\Pondok_Laundry.JenisBarang.resources
+D:\Coding\Desktop\pondok-laundry-main\Pondok Laundry\obj\x86\Debug\Pondok_Laundry.Koneksi.resources
+D:\Coding\Desktop\pondok-laundry-main\Pondok Laundry\obj\x86\Debug\Pondok_Laundry.Pesanan.resources
+D:\Coding\Desktop\pondok-laundry-main\Pondok Laundry\obj\x86\Debug\Pondok_Laundry.PesananBaru.resources
+D:\Coding\Desktop\pondok-laundry-main\Pondok Laundry\obj\x86\Debug\Pondok_Laundry.Splash.resources
+D:\Coding\Desktop\pondok-laundry-main\Pondok Laundry\obj\x86\Debug\Pondok_Laundry.Login.resources
+D:\Coding\Desktop\pondok-laundry-main\Pondok Laundry\obj\x86\Debug\Pondok_Laundry.Resources.resources
+D:\Coding\Desktop\pondok-laundry-main\Pondok Laundry\obj\x86\Debug\Pondok_Laundry.Utama.resources
+D:\Coding\Desktop\pondok-laundry-main\Pondok Laundry\obj\x86\Debug\Pondok Laundry.vbproj.GenerateResource.Cache
+D:\Coding\Desktop\pondok-laundry-main\Pondok Laundry\obj\x86\Debug\Pondok_Laundry.PesananBaruBarang.resources

@@ -44,7 +44,8 @@ Public Class Login
                 txtLoginPassword.Focus()
             Else
                 'MsgBox("Login berhasil!", vbOKOnly, "Login")
-                vPetugas = txtLoginUsername.Text
+                vPetugas = RdData("nama")
+                vIdUser = RdData("id")
 
                 Utama.lbUtamaWelcome.Text = "Hi, " & vPetugas & "."
                 Utama.Show()
@@ -53,6 +54,11 @@ Public Class Login
 
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Kesalahan", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End Try
+        End Try
+
+    End Sub
+
+    Private Sub Login_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+
     End Sub
 End Class

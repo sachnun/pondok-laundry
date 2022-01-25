@@ -5,6 +5,8 @@
     End Sub
     Private Sub Utama_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         Jam()
+        ' show message
+        MsgBox("Fitur belum sepenuhnya berfungsi, masih akan terus dikembangkan..", MsgBoxStyle.Information, "Informasi")
     End Sub
     Private Sub Timer1_Tick(sender As System.Object, e As System.EventArgs) Handles Timer1.Tick
         Jam()
@@ -35,5 +37,23 @@
 
     Private Sub DaftarBaruToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles DaftarBaruToolStripMenuItem.Click
         AkunBaru.ShowDialog()
+    End Sub
+    Private Sub DataGridView1_MouseClick(sender As Object, e As System.Windows.Forms.MouseEventArgs) Handles DataGridView1.MouseClick
+        Pesanan.ShowDialog()
+    End Sub
+
+    Private Sub BulananToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles BulananToolStripMenuItem.Click
+        ' show message
+        MessageBox.Show("Belum Tersedia", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information)
+    End Sub
+
+    Private Sub MingguanToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles MingguanToolStripMenuItem.Click
+        ' show message
+        MessageBox.Show("Belum Tersedia", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information)
+    End Sub
+
+    Private Sub HarianToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles HarianToolStripMenuItem.Click
+        ' show message
+        MessageBox.Show("Belum Tersedia", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
 End Class

@@ -13,6 +13,7 @@ Module ModuleKoneksi
     Public dSet As DataSet
     Public Status As Boolean
     Public vPetugas As String
+    Public vIdUser As String
     Public Brs As Integer
     Public StatReport As Byte
 End Module

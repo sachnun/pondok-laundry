@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Waktu pembuatan: 28 Nov 2021 pada 12.49
+-- Waktu pembuatan: 24 Jan 2022 pada 16.29
 -- Versi server: 5.7.33
 -- Versi PHP: 8.0.9
 
@@ -20,8 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `pondok_laundry`
 --
-CREATE DATABASE IF NOT EXISTS `pondok_laundry` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `pondok_laundry`;
 
 -- --------------------------------------------------------
 
@@ -43,14 +41,13 @@ CREATE TABLE `barang` (
 
 CREATE TABLE `pemesanan` (
   `nota` int(11) NOT NULL,
-  `nama_pemesan` varchar(225) NOT NULL,
-  `telepon` varchar(225) NOT NULL,
-  `alamat` text NOT NULL,
-  `tanggal_masuk` datetime NOT NULL,
-  `tanggal_selesai` datetime NOT NULL,
-  `total_harga` int(100) NOT NULL,
-  `id_user` int(11) NOT NULL,
-  `keterangan` text NOT NULL
+  `nama_pemesan` varchar(225) DEFAULT NULL,
+  `telepon` varchar(225) DEFAULT NULL,
+  `alamat` text,
+  `tanggal_masuk` datetime DEFAULT NULL,
+  `tanggal_selesai` datetime DEFAULT NULL,
+  `total_harga` int(100) DEFAULT NULL,
+  `id_user` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -63,7 +60,6 @@ CREATE TABLE `pemesanan_barang` (
   `id` int(11) NOT NULL,
   `id_barang` int(11) NOT NULL,
   `nota_pemesanan` int(11) NOT NULL,
-  `berat` int(30) NOT NULL,
   `jumlah` int(30) NOT NULL,
   `keterangan` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -80,6 +76,13 @@ CREATE TABLE `user` (
   `password` varchar(225) NOT NULL,
   `nama` varchar(225) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `user`
+--
+
+INSERT INTO `user` (`id`, `username`, `password`, `nama`) VALUES
+(1, 'admin', 'admin', 'Administrator');
 
 --
 -- Indexes for dumped tables
@@ -121,7 +124,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT untuk tabel `barang`
 --
 ALTER TABLE `barang`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT untuk tabel `pemesanan`
@@ -139,24 +142,7 @@ ALTER TABLE `pemesanan_barang`
 -- AUTO_INCREMENT untuk tabel `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
---
-
---
--- Ketidakleluasaan untuk tabel `pemesanan`
---
-ALTER TABLE `pemesanan`
-  ADD CONSTRAINT `pemesanan_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Ketidakleluasaan untuk tabel `pemesanan_barang`
---
-ALTER TABLE `pemesanan_barang`
-  ADD CONSTRAINT `pemesanan_barang_ibfk_1` FOREIGN KEY (`id_barang`) REFERENCES `barang` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `pemesanan_barang_ibfk_2` FOREIGN KEY (`nota_pemesanan`) REFERENCES `pemesanan` (`nota`) ON DELETE CASCADE ON UPDATE CASCADE;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

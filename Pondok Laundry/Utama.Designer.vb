@@ -40,10 +40,13 @@ Partial Class Utama
         Me.toolstripBtnExit = New System.Windows.Forms.ToolStripButton()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.nota = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.status = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.nama_pemesan = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.total_harga = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.btnUtamaPesananBaru = New System.Windows.Forms.Button()
         Me.btnUtamaJenisBarang = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.lbUtamaWelcome = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -57,7 +60,7 @@ Partial Class Utama
         'StatusStrip1
         '
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 380)
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 371)
         Me.StatusStrip1.Name = "StatusStrip1"
         Me.StatusStrip1.Size = New System.Drawing.Size(766, 22)
         Me.StatusStrip1.TabIndex = 1
@@ -166,11 +169,42 @@ Partial Class Utama
         '
         'DataGridView1
         '
+        Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.AllowUserToDeleteRows = False
+        Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.nota, Me.status, Me.nama_pemesan, Me.total_harga})
+        Me.DataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.DataGridView1.Location = New System.Drawing.Point(21, 58)
         Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
+        Me.DataGridView1.RowHeadersVisible = False
         Me.DataGridView1.Size = New System.Drawing.Size(443, 222)
         Me.DataGridView1.TabIndex = 1
+        '
+        'nota
+        '
+        Me.nota.HeaderText = "Nota"
+        Me.nota.Name = "nota"
+        Me.nota.ReadOnly = True
+        '
+        'status
+        '
+        Me.status.HeaderText = "Status"
+        Me.status.Name = "status"
+        Me.status.ReadOnly = True
+        '
+        'nama_pemesan
+        '
+        Me.nama_pemesan.HeaderText = "Pemesan"
+        Me.nama_pemesan.Name = "nama_pemesan"
+        Me.nama_pemesan.ReadOnly = True
+        '
+        'total_harga
+        '
+        Me.total_harga.HeaderText = "Harga"
+        Me.total_harga.Name = "total_harga"
+        Me.total_harga.ReadOnly = True
         '
         'DateTimePicker1
         '
@@ -198,17 +232,6 @@ Partial Class Utama
         Me.btnUtamaJenisBarang.TabIndex = 5
         Me.btnUtamaJenisBarang.Text = "Jenis Barang"
         Me.btnUtamaJenisBarang.UseVisualStyleBackColor = True
-        '
-        'Button3
-        '
-        Me.Button3.Enabled = False
-        Me.Button3.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(29, 310)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(193, 39)
-        Me.Button3.TabIndex = 6
-        Me.Button3.Text = "-"
-        Me.Button3.UseVisualStyleBackColor = True
         '
         'lbUtamaWelcome
         '
@@ -240,9 +263,8 @@ Partial Class Utama
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(766, 402)
+        Me.ClientSize = New System.Drawing.Size(766, 393)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.btnUtamaJenisBarang)
         Me.Controls.Add(Me.btnUtamaPesananBaru)
         Me.Controls.Add(Me.PictureBox1)
@@ -277,7 +299,6 @@ Partial Class Utama
     Friend WithEvents toolstripBtnExit As System.Windows.Forms.ToolStripButton
     Friend WithEvents btnUtamaPesananBaru As System.Windows.Forms.Button
     Friend WithEvents btnUtamaJenisBarang As System.Windows.Forms.Button
-    Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents lbUtamaWelcome As System.Windows.Forms.Label
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
     Friend WithEvents toolstripBtnAkun As System.Windows.Forms.ToolStripDropDownButton
@@ -289,4 +310,8 @@ Partial Class Utama
     Friend WithEvents MingguanToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents HarianToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ProfileToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents nota As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents status As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents nama_pemesan As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents total_harga As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class
