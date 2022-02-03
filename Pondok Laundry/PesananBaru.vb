@@ -66,17 +66,20 @@ Public Class PesananBaru
 
         ' load data to DataGridView
         Dim dt As New DataTable
-        ' select barang.nama_barang, pemesanan_barang.jumlah, pemesanan_barang.keterangan
-        StrSQL = "SELECT barang.nama_barang,  barang.harga_satuan, pemesanan_barang.jumlah, pemesanan_barang.keterangan FROM pemesanan_barang, barang WHERE pemesanan_barang.id_barang = barang.id AND pemesanan_barang.nota_pemesanan = '" & nota & "'"
+        ' select id, barang.nama_barang, pemesanan_barang.jumlah, pemesanan_barang.keterangan
+        StrSQL = "SELECT pemesanan_barang.id, barang.nama_barang,  barang.harga_satuan, pemesanan_barang.jumlah, pemesanan_barang.keterangan FROM pemesanan_barang, barang WHERE pemesanan_barang.id_barang = barang.id AND pemesanan_barang.nota_pemesanan = '" & nota & "'"
         Dim da As New MySqlDataAdapter(StrSQL, CN)
         da.Fill(dt)
         DataGridView1.DataSource = dt
 
         With DataGridView1
-            .Columns(0).HeaderText = "Nama Barang"
-            .Columns(1).HeaderText = "Harga Satuan"
-            .Columns(2).HeaderText = "Jumlah"
-            .Columns(3).HeaderText = "Keterangan"
+            .Columns(0).HeaderText = "ID"
+            ' hide columns 0
+            .Columns(0).Visible = False
+            .Columns(1).HeaderText = "Nama Barang"
+            .Columns(2).HeaderText = "Harga Satuan"
+            .Columns(3).HeaderText = "Jumlah"
+            .Columns(4).HeaderText = "Keterangan"
         End With
 
         hitungTotalHarga()
@@ -85,16 +88,23 @@ Public Class PesananBaru
     ' form on focus
     Private Sub PesananBaru_Activated(sender As System.Object, e As System.EventArgs) Handles MyBase.Activated
         loadPemesananBarang()
+        ' deselect datagridview
+        DataGridView1.ClearSelection()
     End Sub
 
     ' hitung total harga satuan * jumlah dari DataGridView
     Private Sub hitungTotalHarga()
         Dim total As Integer = 0
         For i As Integer = 0 To DataGridView1.Rows.Count - 1
-            total += DataGridView1.Rows(i).Cells(1).Value * DataGridView1.Rows(i).Cells(2).Value
+            total += DataGridView1.Rows(i).Cells(2).Value * DataGridView1.Rows(i).Cells(3).Value
         Next
         total_harga = total
-        lbTotalHarga.Text = "Rp. " + CStr(total_harga)
+        ' Rp format
+        If total_harga = 0 Then
+            lbTotalHarga.Text = "Rp. 0"
+        Else 
+            lbTotalHarga.Text = "Rp. " & Format(total_harga, "###,###,###")
+        End If
     End Sub
 
     Private Sub btnOrderPesanan_Click(sender As System.Object, e As System.EventArgs) Handles btnOrderPesanan.Click
@@ -103,6 +113,11 @@ Public Class PesananBaru
             MsgBox("Data tidak boleh kosong", MsgBoxStyle.Exclamation, "Pesan")
         Else
             simpanPesanan()
+            ' send to detail pesanan
+            Pesanan.lbNota.Text = nota
+
+            Me.Hide()
+            Pesanan.ShowDialog()
         End If
     End Sub
 
@@ -132,5 +147,27 @@ Public Class PesananBaru
         txtAlamat.Text = ""
         total_harga = 0
         lbTotalHarga.Text = "Rp. " + CStr(total_harga)
+    End Sub
+
+    ' DataGridView1 double click delete data
+    Private Sub DataGridView1_CellDoubleClick(sender As Object, e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridView1.CellDoubleClick
+        ' confirm delete
+        If MsgBox("Apakah anda yakin akan menghapus data ini?", MsgBoxStyle.YesNo, "Konfirmasi") = MsgBoxResult.Yes Then
+            ' delete data
+            StrCN = "Database='" & vDatabase & "'; " & _
+                "Data Source='" & vServer & "'; " & _
+                "User id='" & vUser & "'; " & _
+                "Password='" & vPass & "'"
+
+            CN = New MySqlConnection(StrCN)
+            CN.Open()
+
+            ' delete data
+            StrSQL = "DELETE FROM pemesanan_barang WHERE id = '" & DataGridView1.CurrentRow.Cells(0).Value & "'"
+            Dim cmd As MySqlCommand = New MySqlCommand(StrSQL, CN)
+            cmd.ExecuteNonQuery()
+            ' load data
+            loadPemesananBarang()
+        End If
     End Sub
 End Class

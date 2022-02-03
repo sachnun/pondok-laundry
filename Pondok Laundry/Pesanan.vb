@@ -53,7 +53,7 @@ Public Class Pesanan
             lbNama.Text = RdData("nama_pemesan")
             lbTelepon.Text = RdData("telepon")
             lbAlamat.Text = RdData("alamat")
-            lbTotalHarga.Text = "Rp. " + CStr(RdData("total_harga"))
+            lbTotalHarga.Text = "Rp. " & Format(RdData("total_harga"), "###,###,###")
             lbTanggalMasuk.Text = RdData("tanggal_masuk")
             If Not IsDBNull(RdData("tanggal_selesai")) Then
                 lbTanggalKeluar.Text = RdData("tanggal_selesai")
@@ -98,5 +98,18 @@ Public Class Pesanan
         ' show message
         MsgBox("Pesanan telah selesai", MsgBoxStyle.Information, "Pesanan Selesai")
         loadPemesanan()
+    End Sub
+
+    Private Sub btnPrintNota_Click(sender As System.Object, e As System.EventArgs) Handles btnPrintNota.Click
+        ' message box
+        Dim result As DialogResult = MessageBox.Show("Apakah anda yakin ingin mencetak nota ini?", "Konfirmasi", MessageBoxButtons.YesNo)
+        If result = DialogResult.Yes Then
+            printNota()
+        End If
+    End Sub
+
+    Private Sub printNota()
+        ' message box segera datang
+        Dim result As DialogResult = MessageBox.Show("Fitur Nota akan segera datang", "Konfirmasi", MessageBoxButtons.OK)
     End Sub
 End Class

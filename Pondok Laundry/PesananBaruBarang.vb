@@ -42,11 +42,10 @@ Public Class PesananBaruBarang
     Private Sub hargaTotal()
         If txtJumlah.Text = "" Then
             harga_total = harga_satuan * CInt(1)
-            lbHargaTotal.Text = "Rp. " + CStr(harga_total)
         Else
             harga_total = harga_satuan * CInt(txtJumlah.Text)
-            lbHargaTotal.Text = "Rp. " + CStr(harga_total)
         End If
+        lbHargaTotal.Text = "Rp. " & Format(harga_total, "###,###,###")
     End Sub
 
     ' load data barang ke DataGridView

@@ -88,6 +88,12 @@
     <Compile Include="AkunBaru.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Laporan.Designer.vb">
+      <DependentUpon>Laporan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="JenisBarang.Designer.vb">
       <DependentUpon>JenisBarang.vb</DependentUpon>
     </Compile>
@@ -160,6 +166,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AkunBaru.resx">
       <DependentUpon>AkunBaru.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan.resx">
+      <DependentUpon>Laporan.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="JenisBarang.resx">
       <DependentUpon>JenisBarang.vb</DependentUpon>

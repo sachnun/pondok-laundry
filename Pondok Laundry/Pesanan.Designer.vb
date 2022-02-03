@@ -45,6 +45,7 @@ Partial Class Pesanan
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.btnPrintNota = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
@@ -55,6 +56,7 @@ Partial Class Pesanan
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.btnPrintNota)
         Me.GroupBox1.Controls.Add(Me.lbNota)
         Me.GroupBox1.Controls.Add(Me.Label14)
         Me.GroupBox1.Controls.Add(Me.lbAlamat)
@@ -65,7 +67,7 @@ Partial Class Pesanan
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(277, 209)
+        Me.GroupBox1.Size = New System.Drawing.Size(277, 223)
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Pemesan"
@@ -90,7 +92,7 @@ Partial Class Pesanan
         '
         'lbAlamat
         '
-        Me.lbAlamat.Location = New System.Drawing.Point(83, 130)
+        Me.lbAlamat.Location = New System.Drawing.Point(83, 143)
         Me.lbAlamat.Name = "lbAlamat"
         Me.lbAlamat.Size = New System.Drawing.Size(174, 60)
         Me.lbAlamat.TabIndex = 7
@@ -100,7 +102,7 @@ Partial Class Pesanan
         'lbTelepon
         '
         Me.lbTelepon.AutoSize = True
-        Me.lbTelepon.Location = New System.Drawing.Point(83, 99)
+        Me.lbTelepon.Location = New System.Drawing.Point(83, 112)
         Me.lbTelepon.Name = "lbTelepon"
         Me.lbTelepon.Size = New System.Drawing.Size(67, 13)
         Me.lbTelepon.TabIndex = 6
@@ -109,7 +111,7 @@ Partial Class Pesanan
         'lbNama
         '
         Me.lbNama.AutoSize = True
-        Me.lbNama.Location = New System.Drawing.Point(83, 68)
+        Me.lbNama.Location = New System.Drawing.Point(83, 81)
         Me.lbNama.Name = "lbNama"
         Me.lbNama.Size = New System.Drawing.Size(67, 13)
         Me.lbNama.TabIndex = 5
@@ -118,7 +120,7 @@ Partial Class Pesanan
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(25, 130)
+        Me.Label3.Location = New System.Drawing.Point(25, 143)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(39, 13)
         Me.Label3.TabIndex = 4
@@ -127,7 +129,7 @@ Partial Class Pesanan
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(18, 99)
+        Me.Label2.Location = New System.Drawing.Point(18, 112)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(46, 13)
         Me.Label2.TabIndex = 2
@@ -136,7 +138,7 @@ Partial Class Pesanan
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(29, 68)
+        Me.Label1.Location = New System.Drawing.Point(29, 81)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(35, 13)
         Me.Label1.TabIndex = 0
@@ -145,7 +147,7 @@ Partial Class Pesanan
         'GroupBox3
         '
         Me.GroupBox3.Controls.Add(Me.lbTotalHarga)
-        Me.GroupBox3.Location = New System.Drawing.Point(12, 227)
+        Me.GroupBox3.Location = New System.Drawing.Point(12, 241)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(277, 70)
         Me.GroupBox3.TabIndex = 6
@@ -164,7 +166,7 @@ Partial Class Pesanan
         '
         'btnSelesaiPesanan
         '
-        Me.btnSelesaiPesanan.Location = New System.Drawing.Point(733, 250)
+        Me.btnSelesaiPesanan.Location = New System.Drawing.Point(736, 268)
         Me.btnSelesaiPesanan.Name = "btnSelesaiPesanan"
         Me.btnSelesaiPesanan.Size = New System.Drawing.Size(265, 43)
         Me.btnSelesaiPesanan.TabIndex = 8
@@ -179,7 +181,7 @@ Partial Class Pesanan
         Me.GroupBox4.Controls.Add(Me.Label11)
         Me.GroupBox4.Controls.Add(Me.lbTanggalMasuk)
         Me.GroupBox4.Controls.Add(Me.Label9)
-        Me.GroupBox4.Location = New System.Drawing.Point(733, 121)
+        Me.GroupBox4.Location = New System.Drawing.Point(736, 139)
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.Size = New System.Drawing.Size(265, 123)
         Me.GroupBox4.TabIndex = 10
@@ -244,9 +246,9 @@ Partial Class Pesanan
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.Pondok_Laundry.My.Resources.Resources.logo_solid
-        Me.PictureBox1.Location = New System.Drawing.Point(791, 27)
+        Me.PictureBox1.Location = New System.Drawing.Point(791, 31)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(162, 79)
+        Me.PictureBox1.Size = New System.Drawing.Size(171, 87)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 11
         Me.PictureBox1.TabStop = False
@@ -256,7 +258,7 @@ Partial Class Pesanan
         Me.GroupBox2.Controls.Add(Me.DataGridView1)
         Me.GroupBox2.Location = New System.Drawing.Point(302, 14)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(416, 283)
+        Me.GroupBox2.Size = New System.Drawing.Size(416, 297)
         Me.GroupBox2.TabIndex = 12
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "List Pesanan Barang"
@@ -274,15 +276,24 @@ Partial Class Pesanan
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowHeadersVisible = False
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(381, 234)
+        Me.DataGridView1.Size = New System.Drawing.Size(381, 248)
         Me.DataGridView1.TabIndex = 0
+        '
+        'btnPrintNota
+        '
+        Me.btnPrintNota.Location = New System.Drawing.Point(159, 26)
+        Me.btnPrintNota.Name = "btnPrintNota"
+        Me.btnPrintNota.Size = New System.Drawing.Size(98, 30)
+        Me.btnPrintNota.TabIndex = 10
+        Me.btnPrintNota.Text = "Print Nota"
+        Me.btnPrintNota.UseVisualStyleBackColor = True
         '
         'Pesanan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1013, 312)
+        Me.ClientSize = New System.Drawing.Size(1013, 323)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.GroupBox4)
@@ -328,4 +339,5 @@ Partial Class Pesanan
     Friend WithEvents Label14 As System.Windows.Forms.Label
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents btnPrintNota As System.Windows.Forms.Button
 End Class

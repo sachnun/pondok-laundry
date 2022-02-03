@@ -32,13 +32,12 @@ Partial Class Utama
         Me.DaftarBaruToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.LogoutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.toolstripBtnLaporan = New System.Windows.Forms.ToolStripDropDownButton()
-        Me.BulananToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MingguanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.HarianToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.toolstripBtnLaporan = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.toolstripBtnExit = New System.Windows.Forms.ToolStripButton()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.lbProsesCount = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.btnUtamaPesananBaru = New System.Windows.Forms.Button()
@@ -46,8 +45,7 @@ Partial Class Utama
         Me.lbUtamaWelcome = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.lbProsesCount = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.StatusStrip1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -115,30 +113,11 @@ Partial Class Utama
         '
         'toolstripBtnLaporan
         '
-        Me.toolstripBtnLaporan.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BulananToolStripMenuItem, Me.MingguanToolStripMenuItem, Me.HarianToolStripMenuItem})
         Me.toolstripBtnLaporan.Image = Global.Pondok_Laundry.My.Resources.Resources.icon_chart
         Me.toolstripBtnLaporan.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.toolstripBtnLaporan.Name = "toolstripBtnLaporan"
-        Me.toolstripBtnLaporan.Size = New System.Drawing.Size(79, 22)
+        Me.toolstripBtnLaporan.Size = New System.Drawing.Size(70, 22)
         Me.toolstripBtnLaporan.Text = "Laporan"
-        '
-        'BulananToolStripMenuItem
-        '
-        Me.BulananToolStripMenuItem.Name = "BulananToolStripMenuItem"
-        Me.BulananToolStripMenuItem.Size = New System.Drawing.Size(129, 22)
-        Me.BulananToolStripMenuItem.Text = "Bulanan"
-        '
-        'MingguanToolStripMenuItem
-        '
-        Me.MingguanToolStripMenuItem.Name = "MingguanToolStripMenuItem"
-        Me.MingguanToolStripMenuItem.Size = New System.Drawing.Size(129, 22)
-        Me.MingguanToolStripMenuItem.Text = "Mingguan"
-        '
-        'HarianToolStripMenuItem
-        '
-        Me.HarianToolStripMenuItem.Name = "HarianToolStripMenuItem"
-        Me.HarianToolStripMenuItem.Size = New System.Drawing.Size(129, 22)
-        Me.HarianToolStripMenuItem.Text = "Harian"
         '
         'ToolStripSeparator1
         '
@@ -155,6 +134,7 @@ Partial Class Utama
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.lbProsesCount)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.DataGridView1)
@@ -166,6 +146,23 @@ Partial Class Utama
         Me.GroupBox1.TabIndex = 7
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Pesanan Saat Ini"
+        '
+        'lbProsesCount
+        '
+        Me.lbProsesCount.Location = New System.Drawing.Point(420, 33)
+        Me.lbProsesCount.Name = "lbProsesCount"
+        Me.lbProsesCount.Size = New System.Drawing.Size(44, 16)
+        Me.lbProsesCount.TabIndex = 3
+        Me.lbProsesCount.Text = "999"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(318, 33)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(98, 16)
+        Me.Label1.TabIndex = 2
+        Me.Label1.Text = "Dalam Proses :"
         '
         'DataGridView1
         '
@@ -180,14 +177,14 @@ Partial Class Utama
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowHeadersVisible = False
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(443, 222)
+        Me.DataGridView1.Size = New System.Drawing.Size(443, 205)
         Me.DataGridView1.TabIndex = 1
         '
         'DateTimePicker1
         '
         Me.DateTimePicker1.Location = New System.Drawing.Point(21, 29)
         Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 22)
+        Me.DateTimePicker1.Size = New System.Drawing.Size(245, 22)
         Me.DateTimePicker1.TabIndex = 0
         '
         'btnUtamaPesananBaru
@@ -235,22 +232,15 @@ Partial Class Utama
         Me.PictureBox1.TabIndex = 3
         Me.PictureBox1.TabStop = False
         '
-        'Label1
+        'Label2
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(318, 33)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(98, 16)
-        Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Dalam Proses :"
-        '
-        'lbProsesCount
-        '
-        Me.lbProsesCount.Location = New System.Drawing.Point(420, 33)
-        Me.lbProsesCount.Name = "lbProsesCount"
-        Me.lbProsesCount.Size = New System.Drawing.Size(44, 16)
-        Me.lbProsesCount.TabIndex = 3
-        Me.lbProsesCount.Text = "999"
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(18, 266)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(163, 14)
+        Me.Label2.TabIndex = 4
+        Me.Label2.Text = "klik row untuk lihat detail lengkap"
         '
         'Utama
         '
@@ -300,11 +290,9 @@ Partial Class Utama
     Friend WithEvents DaftarBaruToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripSeparator2 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents LogoutToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents toolstripBtnLaporan As System.Windows.Forms.ToolStripDropDownButton
-    Friend WithEvents BulananToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents MingguanToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents HarianToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ProfileToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents lbProsesCount As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents toolstripBtnLaporan As System.Windows.Forms.ToolStripButton
+    Friend WithEvents Label2 As System.Windows.Forms.Label
 End Class

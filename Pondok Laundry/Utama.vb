@@ -8,6 +8,9 @@ Public Class Utama
         tanggal = Date.Now
         Jam()
         loadPemesanan()
+
+        ' datetimepicker max date is today
+        DateTimePicker1.MaxDate = Date.Now
     End Sub
     Private Sub Timer1_Tick(sender As System.Object, e As System.EventArgs) Handles Timer1.Tick
         Jam()
@@ -40,21 +43,6 @@ Public Class Utama
         AkunBaru.ShowDialog()
     End Sub
 
-    Private Sub BulananToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles BulananToolStripMenuItem.Click
-        ' show message
-        MessageBox.Show("Belum Tersedia", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information)
-    End Sub
-
-    Private Sub MingguanToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles MingguanToolStripMenuItem.Click
-        ' show message
-        MessageBox.Show("Belum Tersedia", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information)
-    End Sub
-
-    Private Sub HarianToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles HarianToolStripMenuItem.Click
-        ' show message
-        MessageBox.Show("Belum Tersedia", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information)
-    End Sub
-
     ' load data pemesanan DataGridView bedasarkan tanggal_masuk hari ini
     Private Sub loadPemesanan()
         StrCN = "Database='" & vDatabase & "'; " & _
@@ -80,6 +68,16 @@ Public Class Utama
             .Columns(2).Width = 150
             .Columns(3).HeaderText = "Tanggal Selesai"
         End With
+
+        ' check status datagridview and change row color to red
+        For i As Integer = 0 To DataGridView1.Rows.Count - 1
+            If DataGridView1.Rows(i).Cells(1).Value = "proses" Then
+                DataGridView1.Rows(i).DefaultCellStyle.BackColor = Color.Orange
+            End If
+        Next
+
+        ' deselect datagridview
+        DataGridView1.ClearSelection()
     End Sub
 
 
@@ -125,5 +123,13 @@ Public Class Utama
         CN.Close()
 
         lbProsesCount.Text = count
+    End Sub
+
+    Private Sub toolstripBtnLaporan_Click(sender As System.Object, e As System.EventArgs)
+        Laporan.ShowDialog()
+    End Sub
+
+    Private Sub toolstripBtnLaporan_Click_1(sender As System.Object, e As System.EventArgs) Handles toolstripBtnLaporan.Click
+        Laporan.ShowDialog()
     End Sub
 End Class
