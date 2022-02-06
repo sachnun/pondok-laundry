@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Waktu pembuatan: 25 Jan 2022 pada 06.55
+-- Waktu pembuatan: 06 Feb 2022 pada 17.55
 -- Versi server: 5.7.33
 -- Versi PHP: 8.0.9
 
@@ -143,7 +143,7 @@ ALTER TABLE `pemesanan_barang`
 -- AUTO_INCREMENT untuk tabel `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
