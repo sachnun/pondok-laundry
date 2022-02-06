@@ -3,6 +3,9 @@ Public Class JenisBarang
 
     Private Sub JenisBarang_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         loadBarang()
+
+        DataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None
+        DataGridView1.AllowUserToResizeRows = False
     End Sub
 
     ' load data barang ke DataGridView

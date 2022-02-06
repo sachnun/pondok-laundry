@@ -5,6 +5,9 @@ Public Class Pesanan
         nota = lbNota.Text
         loadPemesananBarang()
         loadPemesanan()
+
+        DataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None
+        DataGridView1.AllowUserToResizeRows = False
     End Sub
 
     ' load pemesanan barang
@@ -31,6 +34,8 @@ Public Class Pesanan
             .Columns(2).HeaderText = "Jumlah"
             .Columns(3).HeaderText = "Keterangan"
         End With
+
+        DataGridView1.ClearSelection()
     End Sub
 
     ' load pemesanan
@@ -104,12 +109,8 @@ Public Class Pesanan
         ' message box
         Dim result As DialogResult = MessageBox.Show("Apakah anda yakin ingin mencetak nota ini?", "Konfirmasi", MessageBoxButtons.YesNo)
         If result = DialogResult.Yes Then
-            printNota()
+            NotaHasil.lbNota.Text = nota
+            NotaHasil.ShowDialog()
         End If
-    End Sub
-
-    Private Sub printNota()
-        ' message box segera datang
-        Dim result As DialogResult = MessageBox.Show("Fitur Nota akan segera datang", "Konfirmasi", MessageBoxButtons.OK)
     End Sub
 End Class

@@ -32,6 +32,7 @@ Partial Class Login
         Me.btnLogin = New System.Windows.Forms.Button()
         Me.btnLoginDatabase = New System.Windows.Forms.ToolStripButton()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.ToolStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -121,12 +122,23 @@ Partial Class Login
         Me.PictureBox1.TabIndex = 2
         Me.PictureBox1.TabStop = False
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.ForeColor = System.Drawing.Color.Gray
+        Me.Label3.Location = New System.Drawing.Point(177, 247)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(229, 13)
+        Me.Label3.TabIndex = 9
+        Me.Label3.Text = "Create by Sachnun Kusmayadi and Adi Bastian"
+        '
         'Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(558, 237)
+        Me.ClientSize = New System.Drawing.Size(558, 269)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.btnLogin)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.checkLoginPassword)
@@ -135,6 +147,7 @@ Partial Class Login
         Me.Controls.Add(Me.txtLoginUsername)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label1)
+        Me.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
@@ -157,4 +170,5 @@ Partial Class Login
     Friend WithEvents ToolStrip1 As System.Windows.Forms.ToolStrip
     Friend WithEvents btnLoginDatabase As System.Windows.Forms.ToolStripButton
     Friend WithEvents btnLogin As System.Windows.Forms.Button
+    Friend WithEvents Label3 As System.Windows.Forms.Label
 End Class

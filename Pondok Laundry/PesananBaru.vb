@@ -9,6 +9,9 @@ Public Class PesananBaru
     Private Sub PesananBaru_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         clearInput()
         createPesanan()
+
+        DataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None
+        DataGridView1.AllowUserToResizeRows = False
     End Sub
 
     ' create new pesanan

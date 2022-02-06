@@ -44,3 +44,4 @@ D:\Coding\Desktop\pondok-laundry-main\Pondok Laundry\obj\x86\Debug\Pondok_Laundr
 D:\Coding\Desktop\pondok-laundry-main\Pondok Laundry\obj\x86\Debug\Pondok Laundry.vbproj.GenerateResource.Cache
 D:\Coding\Desktop\pondok-laundry-main\Pondok Laundry\obj\x86\Debug\Pondok_Laundry.PesananBaruBarang.resources
 D:\Coding\Desktop\pondok-laundry-main\Pondok Laundry\obj\x86\Debug\Pondok_Laundry.Laporan.resources
+D:\Coding\Desktop\pondok-laundry-main\Pondok Laundry\obj\x86\Debug\Pondok_Laundry.NotaHasil.resources

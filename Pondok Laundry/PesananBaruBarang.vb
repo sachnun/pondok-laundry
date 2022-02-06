@@ -10,6 +10,9 @@ Public Class PesananBaruBarang
         nota = PesananBaru.lbNota.Text
         clearInput()
         loadBarang()
+
+        DataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None
+        DataGridView1.AllowUserToResizeRows = False
     End Sub
 
     Private Sub btnTambahPesananBarang_Click(sender As System.Object, e As System.EventArgs) Handles btnTambahPesananBarang.Click
@@ -102,5 +105,41 @@ Public Class PesananBaruBarang
     Private Sub clearInput()
         txtJumlah.Text = "1"
         txtKeterangan.Text = ""
+    End Sub
+
+    Private Sub txtCari_TextChanged(sender As System.Object, e As System.EventArgs) Handles txtCari.TextChanged
+        dataCari(txtCari.Text)
+    End Sub
+
+    Private Sub dataCari(query)
+        ' mencari data bedasarkan query
+        StrCN = "Database='" & vDatabase & "'; " & _
+            "Data Source='" & vServer & "'; " & _
+            "User id='" & vUser & "'; " & _
+            "Password='" & vPass & "'"
+
+        CN = New MySqlConnection(StrCN)
+        CN.Open()
+
+        ' load data
+        StrSQL = "SELECT id, nama_barang, harga_satuan FROM barang WHERE nama_barang LIKE '%" & query & "%'"
+        Dim cmd As MySqlCommand = New MySqlCommand(StrSQL, CN)
+        Dim dt As MySqlDataAdapter = New MySqlDataAdapter(cmd)
+        Dim ds As DataSet = New DataSet()
+        dt.Fill(ds)
+
+        DataGridView1.DataSource = ds.Tables(0)
+
+        ' check data is empty
+        If DataGridView1.RowCount = 0 Then
+            btnTambahPesananBarang.Enabled = False
+            txtKeterangan.Enabled = False
+            txtJumlah.Enabled = False
+            lbHargaTotal.Text = "Rp. 0"
+        Else
+            btnTambahPesananBarang.Enabled = True
+            txtKeterangan.Enabled = True
+            txtJumlah.Enabled = True
+        End If
     End Sub
 End Class

@@ -7,6 +7,9 @@ Public Class Laporan
         MonthCalendar1.MaxSelectionCount = 90
 
         loadPemesanan()
+
+        DataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None
+        DataGridView1.AllowUserToResizeRows = False
     End Sub
 
     Private Sub loadPemesanan()
@@ -33,7 +36,11 @@ Public Class Laporan
             .Columns(4).HeaderText = "Total Harga"
             .Columns(5).HeaderText = "Tanggal Masuk"
             .Columns(6).HeaderText = "Tanggal Keluar"
+            .Columns(7).HeaderText = "ID Karyawan"
+            .Columns(8).HeaderText = "Status"
         End With
+
+        DataGridView1.ClearSelection()
     End Sub
 
     'MonthCalendar1 change
@@ -43,7 +50,7 @@ Public Class Laporan
 
     Private Sub Button1_Click(sender As System.Object, e As System.EventArgs) Handles Button1.Click
         ' messagebox oke
-        MsgBox("Fitur Print Laporan masih tahap uji coba!", MsgBoxStyle.Information, "Informasi")
+        MsgBox("Fitur Print Laporan masih tahap uji coba!", MsgBoxStyle.Exclamation, "Warning")
 
         ' print preview
         PrintPreviewDialog1.Document = PrintDocument1
@@ -93,7 +100,7 @@ Public Class Laporan
                 y += h
                 If y + h > e.MarginBounds.Bottom Then
                     e.HasMorePages = True
-                    'mRow -= 1
+                    mRow -= 1
                     newpage = True
                     Exit Sub
                 End If

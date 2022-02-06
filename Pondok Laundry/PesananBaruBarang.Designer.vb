@@ -33,6 +33,7 @@ Partial Class PesananBaruBarang
         Me.btnTambahPesananBarang = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.txtCari = New System.Windows.Forms.TextBox()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -115,6 +116,7 @@ Partial Class PesananBaruBarang
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.txtCari)
         Me.GroupBox1.Controls.Add(Me.DataGridView1)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
@@ -130,23 +132,29 @@ Partial Class PesananBaruBarang
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGridView1.GridColor = System.Drawing.Color.White
-        Me.DataGridView1.Location = New System.Drawing.Point(3, 16)
+        Me.DataGridView1.Location = New System.Drawing.Point(3, 51)
         Me.DataGridView1.MultiSelect = False
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowHeadersVisible = False
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(185, 211)
+        Me.DataGridView1.Size = New System.Drawing.Size(185, 173)
         Me.DataGridView1.TabIndex = 0
+        '
+        'txtCari
+        '
+        Me.txtCari.Location = New System.Drawing.Point(6, 19)
+        Me.txtCari.Name = "txtCari"
+        Me.txtCari.Size = New System.Drawing.Size(179, 20)
+        Me.txtCari.TabIndex = 4
         '
         'PesananBaruBarang
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(517, 256)
+        Me.ClientSize = New System.Drawing.Size(517, 254)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.btnTambahPesananBarang)
         Me.Controls.Add(Me.GroupBox2)
@@ -161,6 +169,7 @@ Partial Class PesananBaruBarang
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -175,4 +184,5 @@ Partial Class PesananBaruBarang
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents txtCari As System.Windows.Forms.TextBox
 End Class

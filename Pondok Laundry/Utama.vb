@@ -11,6 +11,9 @@ Public Class Utama
 
         ' datetimepicker max date is today
         DateTimePicker1.MaxDate = Date.Now
+
+        DataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None
+        DataGridView1.AllowUserToResizeRows = False
     End Sub
     Private Sub Timer1_Tick(sender As System.Object, e As System.EventArgs) Handles Timer1.Tick
         Jam()
