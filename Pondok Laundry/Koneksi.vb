@@ -25,13 +25,15 @@
             txtKoneksiUsername.Text = "sql6470901"
             txtKoneksiPassword.Text = "hQsHQrMR7I"
             txtKoneksiDatabase.Text = "sql6470901"
-            Login.ToolStripLabel1.visible = True
+            Login.ToolStripLabel1.Visible = True
+            Utama.ToolStripLabel1.Visible = True
         Else
             txtKoneksiServer.Text = "localhost"
             txtKoneksiUsername.Text = "root"
             txtKoneksiPassword.Text = ""
             txtKoneksiDatabase.Text = "pondok_laundry"
-            Login.ToolStripLabel1.visible = False
+            Login.ToolStripLabel1.Visible = False
+            Utama.ToolStripLabel1.Visible = False
         End If
     End Sub
 End Class
