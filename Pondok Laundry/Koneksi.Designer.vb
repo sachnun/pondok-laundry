@@ -34,6 +34,7 @@ Partial Class Koneksi
         Me.btnKoneksiOk = New System.Windows.Forms.Button()
         Me.btnKoneksiReset = New System.Windows.Forms.Button()
         Me.checkKoneksiPassword = New System.Windows.Forms.CheckBox()
+        Me.checkDev = New System.Windows.Forms.CheckBox()
         Me.SuspendLayout()
         '
         'txtKoneksiServer
@@ -139,6 +140,16 @@ Partial Class Koneksi
         Me.checkKoneksiPassword.TabIndex = 14
         Me.checkKoneksiPassword.UseVisualStyleBackColor = True
         '
+        'checkDev
+        '
+        Me.checkDev.AutoSize = True
+        Me.checkDev.Location = New System.Drawing.Point(15, 248)
+        Me.checkDev.Name = "checkDev"
+        Me.checkDev.Size = New System.Drawing.Size(46, 17)
+        Me.checkDev.TabIndex = 15
+        Me.checkDev.Text = "Dev"
+        Me.checkDev.UseVisualStyleBackColor = True
+        '
         'Koneksi
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -146,6 +157,7 @@ Partial Class Koneksi
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(255, 287)
         Me.ControlBox = False
+        Me.Controls.Add(Me.checkDev)
         Me.Controls.Add(Me.checkKoneksiPassword)
         Me.Controls.Add(Me.btnKoneksiReset)
         Me.Controls.Add(Me.btnKoneksiOk)
@@ -179,4 +191,5 @@ Partial Class Koneksi
     Friend WithEvents btnKoneksiOk As System.Windows.Forms.Button
     Friend WithEvents btnKoneksiReset As System.Windows.Forms.Button
     Friend WithEvents checkKoneksiPassword As System.Windows.Forms.CheckBox
+    Friend WithEvents checkDev As System.Windows.Forms.CheckBox
 End Class

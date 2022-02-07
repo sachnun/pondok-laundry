@@ -29,10 +29,11 @@ Partial Class Login
         Me.Label2 = New System.Windows.Forms.Label()
         Me.checkLoginPassword = New System.Windows.Forms.CheckBox()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.btnLogin = New System.Windows.Forms.Button()
         Me.btnLoginDatabase = New System.Windows.Forms.ToolStripButton()
+        Me.btnLogin = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
         Me.ToolStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -87,12 +88,20 @@ Partial Class Login
         '
         'ToolStrip1
         '
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnLoginDatabase})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnLoginDatabase, Me.ToolStripLabel1})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(558, 25)
         Me.ToolStrip1.TabIndex = 7
         Me.ToolStrip1.Text = "ToolStrip1"
+        '
+        'btnLoginDatabase
+        '
+        Me.btnLoginDatabase.Image = Global.Pondok_Laundry.My.Resources.Resources.icon_obeng
+        Me.btnLoginDatabase.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnLoginDatabase.Name = "btnLoginDatabase"
+        Me.btnLoginDatabase.Size = New System.Drawing.Size(68, 22)
+        Me.btnLoginDatabase.Text = "Koneksi"
         '
         'btnLogin
         '
@@ -103,14 +112,6 @@ Partial Class Login
         Me.btnLogin.TabIndex = 8
         Me.btnLogin.Text = "Login"
         Me.btnLogin.UseVisualStyleBackColor = True
-        '
-        'btnLoginDatabase
-        '
-        Me.btnLoginDatabase.Image = Global.Pondok_Laundry.My.Resources.Resources.icon_obeng
-        Me.btnLoginDatabase.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnLoginDatabase.Name = "btnLoginDatabase"
-        Me.btnLoginDatabase.Size = New System.Drawing.Size(68, 22)
-        Me.btnLoginDatabase.Text = "Koneksi"
         '
         'PictureBox1
         '
@@ -131,6 +132,14 @@ Partial Class Login
         Me.Label3.Size = New System.Drawing.Size(229, 13)
         Me.Label3.TabIndex = 9
         Me.Label3.Text = "Create by Sachnun Kusmayadi and Adi Bastian"
+        '
+        'ToolStripLabel1
+        '
+        Me.ToolStripLabel1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripLabel1.Name = "ToolStripLabel1"
+        Me.ToolStripLabel1.Size = New System.Drawing.Size(122, 22)
+        Me.ToolStripLabel1.Text = "Developer Mode ON"
+        Me.ToolStripLabel1.Visible = False
         '
         'Login
         '
@@ -171,4 +180,5 @@ Partial Class Login
     Friend WithEvents btnLoginDatabase As System.Windows.Forms.ToolStripButton
     Friend WithEvents btnLogin As System.Windows.Forms.Button
     Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents ToolStripLabel1 As System.Windows.Forms.ToolStripLabel
 End Class
